@@ -31,6 +31,7 @@ const modelTimeout = 10000; // 5 seconds timeout for model requests
 
 // Initialize Redis client with connection pooling
 const redisClient = Redis.createClient({
+    url: process.env.REDIS_URL,
     socket: {
         reconnectStrategy: retries => Math.min(retries * 100, 3000)
     }
