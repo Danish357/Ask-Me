@@ -26,8 +26,8 @@ const generationConfig = {
 };
 
 // Initialize Model with Timeout
-const model = genAI.getGenerativeModel({ model: "gemini-pro", generationConfig });
-const modelTimeout = 10000; // 5 seconds timeout for model requests
+const model = genAI.getGenerativeModel({ model: "gemini-3.1-pro-preview", generationConfig });
+const modelTimeout = 10000; // 10 seconds timeout for model requests
 
 // Initialize Redis client with connection pooling
 const redisClient = Redis.createClient({
